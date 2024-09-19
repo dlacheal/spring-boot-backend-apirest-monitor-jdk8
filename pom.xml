@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.utp.springboot.backend.apirest.monitor</groupId>
     <artifactId>spring-boot-backend-apirest-monitor</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>spring-boot-backend-apirest-monitor</name>
     <description>Monitor EPP</description>
     <properties>
