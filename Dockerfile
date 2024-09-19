@@ -11,4 +11,4 @@ COPY ./target/spring-boot-backend-apirest-monitor-0.0.2-SNAPSHOT.jar .
 # Puerto donde se expone la aplicacion
 EXPOSE 8081
 # Punto de entrada de comandos para ejecutar la aplicacion
-ENTRYPOINT ["java", "-jar", "spring-boot-backend-apirest-monitor-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "spring-boot-backend-apirest-monitor-0.0.2-SNAPSHOT.jar"]
