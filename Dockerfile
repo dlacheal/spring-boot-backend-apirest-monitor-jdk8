@@ -1,5 +1,5 @@
 # Imagen base
-FROM openjdk:17.0.2
+FROM openjdk:8
 # Autor
 LABEL authors="David Lache"
 # Directorio donde se suben las imagenes
