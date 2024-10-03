@@ -22,15 +22,22 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/epps", "/api/epps/page/**").permitAll()
-                .antMatchers("/api/empleados/{id}").permitAll()
-                .antMatchers("/api/registros/**").permitAll()
+                //.antMatchers(HttpMethod.GET, "/api/epps", "/api/epps/page/**").permitAll()
+                //.antMatchers("/api/empleados/**").permitAll()
+                //.antMatchers("/api/registros/**").permitAll()
+                //.antMatchers(HttpMethod.GET, "/api/categorias","/api/categorias/page/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.GET, "/api/empleados/ver/**","/api/empleados/page/**").hasRole("USER")
+                //    empleados/ver/33 ("USER", "ADMIN")
+                //    SUBIR IMAGEN DE SU PERFIL ("USER", "ADMIN")
+                //    registros/ver/55 ("USER", "ADMIN")
                 /*.antMatchers(HttpMethod.GET, "/api/empleados/{id}").hasAnyRole("USER", "ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/empleados").hasRole("ADMIN")
                 .antMatchers("/api/empleados/**").hasRole("ADMIN")
-                .antMatchers("/api/empleados/**").hasRole("ADMIN")
-                .anyRequest().authenticated()*/
+                .antMatchers("/api/empleados/**").hasRole("ADMIN")*/
+                //.anyRequest().authenticated()
                 .and().cors().configurationSource(corsConfigurationSource());
+        //.anyRequest().authenticated();
+
     }
 
     @Bean
